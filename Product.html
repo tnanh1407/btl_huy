@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bánh Tráng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #ff6600;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            font-size: 16px;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .discount {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .product-card button {
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product-card button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bánh Tráng Ngon</h1>
+    </div>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="Imagine/Sp(1).png" alt="Bánh tráng phô mai">
+            <div class="product-info">
+                <h3>BÁNH TRÁNG</h3>
+                <p>Bánh tráng hương vị phô mai béo ngậy</p>
+                <p class="price">30.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="Imagine/Sp(2).png" alt="Bánh tráng phơi sương">
+            <div class="product-info">
+                <h3>BÁNH TRÁNG</h3>
+                <p>Bánh tráng phơi sương kèm muối tôm và bơ</p>
+                <p class="price">50.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="Imagine/Sp(3).png" alt="Bánh tráng trộn">
+            <div class="product-info">
+                <h3>BÁNH TRÁNG</h3>
+                <p>Bánh tráng trộn</p>
+                <p class="discount">40.000 ₫</p>
+                <p class="price">25.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="Imagine/Sp(4).png" alt="Bánh tráng muối nhuyễn">
+            <div class="product-info">
+                <h3>BÁNH TRÁNG</h3>
+                <p>Bánh tráng trộn muối nhuyễn cay cay</p>
+                <p class="discount">50.000 ₫</p>
+                <p class="price">30.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="Imagine/Sp(5).png" alt="Bánh tráng sốt me">
+            <div class="product-info">
+                <h3>BÁNH TRÁNG</h3>
+                <p>Bánh tráng trộn sốt me cực ngon</p>
+                <p class="discount">45.000 ₫</p>
+                <p class="price">25.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="Imagine/Sp(6).png" alt="Cơm cháy chà bông">
+            <div class="product-info">
+                <h3>CƠM CHÁY</h3>
+                <p>Cơm cháy chà bông giòn rụm 300g</p>
+                <p class="price">50.000 ₫</p>
+                <button>THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
