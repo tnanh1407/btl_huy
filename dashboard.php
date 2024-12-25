@@ -76,7 +76,7 @@
             case "dang_xuat":
                 session_destroy();
                 session_unset();
-                header('location: login.php');
+                header('location: dangnhap .php');
                 break;
         }
     }
