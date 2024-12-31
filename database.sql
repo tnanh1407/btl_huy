@@ -1,4 +1,5 @@
-create database huy
+-- Tạo database
+CREATE DATABASE IF NOT EXISTS shop_ananas
 
 -- Thêm trường User(Admin)
 create table user 
@@ -25,3 +26,45 @@ gia double not null,
 anh_chinh varchar(255) DEFAULT null,
 anh_phu varchar(255) DEFAULT null
 )
+
+-- Thêm trường giỏ hàng
+CREATE TABLE IF NOT EXISTS gio_hang
+(
+    ma_gio_hang INT PRIMARY KEY AUTO_INCREMENT,
+    ma_nguoi_dung INT,
+    ma_san_pham INT,
+    so_luong INT NOT NULL,
+    gia DOUBLE NOT NULL,
+    FOREIGN KEY (ma_nguoi_dung) REFERENCES user(ma_nguoi_dung),
+    FOREIGN KEY (ma_san_pham) REFERENCES san_pham(ma_san_pham)
+);
+
+
+--Thêm trường thanh toán
+
+CREATE TABLE IF NOT EXISTS thanh_toan
+(
+    ma_thanh_toan INT PRIMARY KEY AUTO_INCREMENT,
+    ma_nguoi_dung INT,
+    trang_thai ENUM('Đặt hàng', 'Đã thanh toán', 'Hủy') NOT NULL DEFAULT 'Đặt hàng',
+    dia_chi_giao_hang VARCHAR(255),
+    tong_tien DOUBLE NOT NULL,
+    ngay_thanh_toan TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ma_nguoi_dung) REFERENCES user(ma_nguoi_dung)
+);
+
+
+--thêm trường chi tiết đơn hàng
+
+CREATE TABLE IF NOT EXISTS chi_tiet_don_hang
+(
+    ma_chi_tiet INT PRIMARY KEY AUTO_INCREMENT,
+    ma_thanh_toan INT,
+    ma_san_pham INT,
+    so_luong INT NOT NULL,
+    gia DOUBLE NOT NULL,
+    FOREIGN KEY (ma_thanh_toan) REFERENCES thanh_toan(ma_thanh_toan),
+    FOREIGN KEY (ma_san_pham) REFERENCES san_pham(ma_san_pham)
+);
+
+
